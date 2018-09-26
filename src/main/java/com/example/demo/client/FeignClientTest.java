@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(name="CLIENT")
 public interface FeignClientTest {
-    @GetMapping(value = "/client/welcome/test")
+    @GetMapping(value = "/welcome/test")
     String test();
 
-    @PostMapping(value = "/client/welcome/postTest")
+    @PostMapping(value = "/welcome/postTest")
     User postTest(@RequestBody User user);
 
-    @GetMapping (value = "/client/welcome/welcome/{message}")
+    @GetMapping (value = "/welcome/welcome/{message}")
     String welcome(@PathVariable(value = "message") String message);
 
 }

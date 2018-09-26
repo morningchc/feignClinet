@@ -17,6 +17,11 @@ public class Welcome {
     @Autowired
     private FeignClientTest feignClientTest;
 
+    @GetMapping("/init")
+    public String init(){
+        return "I'm FeignClient";
+    }
+
     @GetMapping("/test")
     public String test(){
         String msg = feignClientTest.test();
